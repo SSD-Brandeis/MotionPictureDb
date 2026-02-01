@@ -1,4 +1,4 @@
-# Create Your Own IMDb
+# Create MotionPictureDb
 
 ## Overview
 This project is a simple web application similar to IMDb that interacts with a MySQL/MariaDB database. The application features a Flask-based UI that allows users to **view movie and actor details, like movies, and execute SQL queries**.
