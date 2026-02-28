@@ -156,7 +156,7 @@ Once your database is set up and populated with sample data, follow these steps 
 ---
 
 ## **3. Implementing SQL Queries**
-The project requires students to **write 20 raw SQL queries** in `queries.py`. Each query corresponds to a specific question (Q1-Q20) that tests your understanding of SQL concepts. May sure you load the databse from `data/data2.sql` before you start implementing the queries, as some of the queries require data from that file.
+The project requires students to **write 18 raw SQL queries** in `queries.py`. Each query corresponds to a specific question (Q1-Q20) that tests your understanding of SQL concepts. May sure you load the databse from `data/data2.sql` before you start implementing the queries, as some of the queries require data from that file.
 
 ---
 

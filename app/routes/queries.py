@@ -23,7 +23,7 @@ def search_movie():
     movie_name = request.form["movie_name"]
 
     # >>>> TODO 2: Search Motion Picture by Motion picture name. <<<<
-    #              List the movie `name`, `rating`, `production` and `budget`.
+    #              List the `name`, `rating`, `production` and `budget`.
 
     query = """ """
 
@@ -228,20 +228,20 @@ def movies_higher_than_comedy_avg():
     return render_template("movies_higher_than_comedy_avg.html", results=results)
 
 
-@queries_bp.route("/top_5_movies_people_roles", methods=["GET"])
-def top_5_movies_people_roles():
-    """
-    Display the top 5 movies that involve the most people and roles.
-    """
+# @queries_bp.route("/top_5_movies_people_roles", methods=["GET"])
+# def top_5_movies_people_roles():
+#     """
+#     Display the top 5 movies that involve the most people and roles.
+#     """
 
-    # >>>> TODO 14: Find the top 5 movies with the highest number of people playing a role in that movie. <<<<
-    #               Show the `movie name`, `people count` and `role count` for the movies.
+#     # >>>> TODO 14: Find the top 5 movies with the highest number of people playing a role in that movie. <<<<
+#     #               Show the `movie name`, `people count` and `role count` for the movies.
 
-    query = """ """
+#     query = """ """
 
-    with Database() as db:
-        results = db.execute(query)
-    return render_template("top_5_movies_people_roles.html", results=results)
+#     with Database() as db:
+#         results = db.execute(query)
+#     return render_template("top_5_movies_people_roles.html", results=results)
 
 
 @queries_bp.route("/actors_with_common_birthday", methods=["GET"])
@@ -250,7 +250,7 @@ def actors_with_common_birthday():
     Find pairs of actors who share the same birthday.
     """
 
-    # >>>> TODO 15: Find actors who share the same birthday. <<<<
+    # >>>> TODO 14: Find actors who share the same birthday. <<<<
     #               List the actor names (actor 1, actor 2) and their common birthday.
 
     query = """ """
@@ -265,7 +265,7 @@ def top_production_by_genre():
     """
     Display the top production companies for each genre based on the number of movies with above-average ratings.
     """
-    # >>>> TODO 16: For each genre, find the production companies that have produced at least 2 movies with ratings above the average rating for that genre. <<<<
+    # >>>> TODO 15: List the productions that have produced more than two movies in a given genre, where each movie has a rating higher than the average rating of that genre. <<<<
     #               List the `production company name`, `genre name` and the `count of movies` that meet the criteria, ordered by the count of movies in descending order.
 
     query = """ """
@@ -282,7 +282,7 @@ def versatile_talent():
     """
     Display people who have won awards for acting, directing, and producing.
     """
-    # >>>> TODO 17: Find the people who have won awards and performed as an actor, director, and producer. <<<<
+    # >>>> TODO 16: Find the people who have won awards and performed as an actor, director, and producer. <<<<
     #               List the person’s `name` and `nationality`.
 
     query = """ """
@@ -301,8 +301,9 @@ def high_roi_movies():
     """
     Display the top 5 movies shot in the USA with the highest return on investment (ROI) compared to the average ROI of Marvel movies.
     """
-    # >>>> TODO 18: Find the top 5 movies shot in the USA with the highest return on investment (ROI), where ROI is defined as box office collection divided by budget. <<<<
+    # >>>> TODO 17: Find the top 5 movies shot in the USA with the highest return on investment (ROI), where ROI is defined as box office collection divided by budget. <<<<
     #               Only include movies that have an ROI greater than the average ROI of all Marvel movies
+    #               First column should be the movie name, second column should be country, and third column should be the ROI.
 
     query = """ """
 
@@ -313,22 +314,22 @@ def high_roi_movies():
     )
 
 
-@queries_bp.route("/super_fans", methods=["POST"])
-def super_fans():
-    """
-    Find users who have liked all movies from a specific production company.
-    """
-    # >>>> TODO 19: Find the users who have liked all the movies produced by a specific production company. <<<<
-    #               List the user `name` and `email`.
+# @queries_bp.route("/super_fans", methods=["POST"])
+# def super_fans():
+#     """
+#     Find users who have liked all movies from a specific production company.
+#     """
+#     # >>>> TODO 19: Find the users who have liked all the movies produced by a specific production company. <<<<
+#     #               List the user `name` and `email`.
 
-    production = request.form["production"]
-    query = """ """
+#     production = request.form["production"]
+#     query = """ """
 
-    with Database() as db:
-        results = db.execute(query, (production,))
-    return render_template(
-        "generic_results.html", results=results, title=f"Super-fans of {production}"
-    )
+#     with Database() as db:
+#         results = db.execute(query, (production,))
+#     return render_template(
+#         "generic_results.html", results=results, title=f"Super-fans of {production}"
+#     )
 
 
 @queries_bp.route("/awarded_series_growth", methods=["GET"])
@@ -336,7 +337,7 @@ def awarded_series_growth():
     """
     Display TV series that have won awards and have a season count above the average, ordered by season count in descending order.
     """
-    # >>>> TODO 20: Find the TV series that have won at least one award and have a season count above the average season count of all TV series. <<<<
+    # >>>> TODO 18: Find the TV series that have won at least one award and have a season count above the average season count of all TV series. <<<<
     #               List the TV series `name`, `season count` and the `number of awards won`, ordered by season count in descending order.
 
     query = """ """
